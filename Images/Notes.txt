@@ -1,0 +1,3 @@
+Parent to child can be done using attribute binding using Input decorator
+
+child to parent can be done using attribute binding using Output decorator

@@ -1,0 +1,20 @@
+    <div class="ecart--product--item">
+        <div class="ecart-wishlist-sale-container">
+            <div class="ecart--add--to--wishlist">
+            <i class="fa fa-heart-o" aria-hidden="true"></i>
+            </div>
+            <div *ngIf="product.discountPrice" class="ecart-on-sale-tag">{{(100 -(product.discountPrice*100/product.price)).toFixed(0)}}% OFF</div>
+        </div>
+        <div class="ecart--product--image">
+            <img [src]="product.imageURL" class="ecart--product--image">
+        </div>
+        <div class="ecart--add--to--price">
+            {{product.price}}
+        </div>
+        <div class="ecart--product--name">{{product.name}}</div>
+        <div class="ecart--product--category">{{product.gender}} . {{product.category}} . {{product.brand}}</div>
+        <div class="ecart--product--available-colors">$COLORCOUNT {{product.color.length}} . Best Seller</div>
+        <div class="ecart-product-in-stock" [ngStyle]="{fontWeight: 'bold', color: product.is_in_inventory ? 'Green' : 'Red'}">
+            {{product.is_in_inventory ? 'Available in Stock' : 'Not in Stock' }}
+        </div>
+    </div>
