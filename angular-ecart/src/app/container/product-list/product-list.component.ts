@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { InjectSetupWrapper } from '@angular/core/testing';
 
 @Component({
   selector: 'product-list',
@@ -539,6 +540,9 @@ export class ProductListComponent {
   totalProductOutOfStock = this.products.filter(p=>p.is_in_inventory == false).length;
 
   selectedFilterRadioButton: string = 'all';
+
+  @Input()
+  searchText: string = '';
   
   selectedProducts: object
   onFilterChanged(value:string){

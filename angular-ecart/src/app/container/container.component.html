@@ -1,6 +1,6 @@
 <div class="ecart-productList">
-    <app-search></app-search>
-    <product-list></product-list>
+    <app-search (searchTextChanged)="setSearchText($event)"></app-search>
+    <product-list [searchText]="searchText"></product-list>
     <!-- <img [src]="product.pImage">
     <p>Name: {{product.name}}</p>
     <p>Price: {{'$' + product.price}}</p>
